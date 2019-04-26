@@ -1,0 +1,31 @@
+Create new Virtual Env in Python for API and etc.:
+From default directory go to Desktop ( cd Desktop )
+Next type (  virtualenv venv_test )
+It created PIP, Python 3.7 etc., on desktop
+Type ( cd vent_tes ) to jump to this environment
+Type ( source bin/activate ) it will activate env
+Type ( pip install requests), ( pip install selenium, purest etc..)
+
+ipython
+import requests
+
+####GET####
+url = "https://jsonplaceholder.typicode.com/photos" 
+response = requests.get(url) 
+print(response.json()) 
+
+####POST####
+jsonPayload = {"abumId":1, "title":"test","url":"nothing.com", "thumbnailUrl":"nothing.com"} 
+response = requests.post(url,json=jsonPayload)
+response.json()
+
+####PUT####
+url = "https://jsonplaceholder.typicode.com/photos/100"
+response = requests.put(url,json=jsonPayload)
+response.json()
+
+####DELETE####
+response = requests.delete(url,json=jsonPayload)
+response.json()
+
+
