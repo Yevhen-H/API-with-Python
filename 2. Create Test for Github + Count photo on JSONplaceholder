@@ -1,0 +1,31 @@
+import requests
+url = "https://api.github.com/user"
+response = requests.get(url, auth=("Yevhen-Code", "uuu1559"))
+response.json()
+
+####If required Authorization from website####
+response = requests.get(url, headers ={"Authorization": "7yafavfsxsgfsggsgsggs"})
+
+####print key only####
+my_json = response.json()
+for key in my_json.keys():
+    ...:     print(key)
+my_json["id"]
+47399557
+#####################################################################
+#Problem description
+#Find out if there are any duplicate urls used in the
+#json placeholder photo data
+
+import requests
+url = 'https://jsonplaceholder.typicode.com/photos'
+response = requests.get(url)
+json_data = response.json()
+url_list = []
+for photo in json_data:
+    url_list.append(photo["url"])
+    #add the url for each photo to the url_list
+print(len(url_list))
+#How many items are in the url list (Should be 5000 since we have 5000 photos in our dataset)?
+print(len(set(url_list)))
+#######################################################################
