@@ -1,0 +1,11 @@
+#import csv
+
+#timing_data = []
+#with open ("TestAPI.csv") as csv_file:
+ #   file_reader = csv.reader(csv_file, quotechar="|")
+  #  for row in file_reader:
+   #     print(file_reader.append(row))
+
+import pandas
+df = pandas.read_csv("Test.csv")
+print(df)
